@@ -19,12 +19,6 @@ public class _MappingKit {
 	
 		arp.addMapping("large_capital_data", LargeCapitalData.class);
         arp.addMapping("china_stocks_vane", ChinaStockVaneModel.class);
-		arp.addMapping("amoy_share_pool", AmoySharePool.class);
-		arp.addMapping("master_stock", MasterStock.class);
-		arp.addMapping("master_stock_pool", MasterStockPool.class);
-		arp.addMapping("master_stock_pool_tmp", MasterStockPoolTmp.class);
-		
-		arp.addMapping("master_stock_pool_operator_flow", MasterStockPoolOperatorFlow.class);
 		//portfolio
 		arp.addMapping("portfolio_accountid", Account.class);
 		arp.addMapping("portfolio_adviser", Adviser.class);

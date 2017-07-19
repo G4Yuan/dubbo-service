@@ -227,27 +227,6 @@ service IntelligentService{
 	bool updateCSVane(1:string reqId,2:ChinaStocksVane csVane)throws (1:BusinessException ex);
 	CSVanePager findCSVanePage(1:string reqId,2:int pageNow,3:int pageSize)throws (1:BusinessException ex);
 	
-	#公告淘股
-	int saveAndUpdateAmoySharePool(1:string reqId,2:long userId, 3:AmoySharePoolInfo info)throws (1:BusinessException ex);
-	# 根据id获取公告淘股数据
-	AmoySharePoolInfo findAmoySharePoolById(1:string reqId,2:long recordId)throws (1:BusinessException ex);
-	# 分页获取公告池列表
-	AmoyPager findByPager(1:string reqId,2:int pageNow, 3:int pageSize)throws (1:BusinessException ex);
-	# 获取当期公告池列表数据
-	AmoySharePoolInfo findCurrentAmoySharePool(1:string reqId)throws (1:BusinessException ex);
-	
-	# 添加和编辑高手股票池
-	int saveAndEditMasterStockPool(1:string reqId, 2:long userId, 3:BaseMasterStockPool info) throws (1:BusinessException ex);
-	# 修改股票池的状态
-	int operatorMasterStockPool(1:string reqId, 2:long userId, 3:long masterId, 4:int status, 5:string content) throws (1:BusinessException ex);
-	MasterStockPoolPager findMasterStockPoolPager(1:string reqId, 2:MasterQueryCondition condition, 3:int pageNow, 4:int pageSize) throws (1:BusinessException ex);
-	# 高手股票池详情
-	BaseMasterStockPool findStockPoolBossDetail(1:string reqId, 2:long stockPoolId)throws (1:BusinessException ex);
-	# 高手股票池详情
-	BaseMasterStockPool findMasterStockPoolDetail(1:string reqId, 2:long stockPoolId)throws (1:BusinessException ex);
-	# 获取股票池列表
-	list<StockShortInfo> findStockPoolList(1:string reqId)throws (1:BusinessException ex);
-	
     #组合新建
     void addPortfolio(1:string reqId,2:PortfolioInfo portfolioInfo)throws (1:BusinessException ex);
     #组合查询列表
